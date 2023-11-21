@@ -82,14 +82,19 @@ M A T H  M E T H O D
 */
 
 let numbers = [9, 4, 2, 5, 10]
-function highestNumber(args) {
-    let highest = 0
-    for(let i in args) {
-        if(args[i] > args[i+1]) {
-            highest = args[i]
-        }
-    }
-    return highest
-}
-highestNumber(numbers)
+console.log(Math.max(...numbers));
+console.log(Math.min(...numbers));
+let size = Math.floor(numbers.length / 2)
+console.log(numbers[size]);
+
+// function highestNumber(args) {
+//     let highest = 0
+//     for(let i in args) {
+//         if(args[i] > args[i+1]) {
+//             highest = args[i]
+//         }
+//     }
+//     return highest
+// }
+// highestNumber(numbers)
 // if you display 'of' it will show values but if you display in, it will how the index.
