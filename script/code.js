@@ -57,17 +57,39 @@ let firstName = 'zubair'
     console.log('absent');
 }
 
+/*
+S W I T C H  S T A T E M E N T
+*/
+
 switch (true) {
     case state == 'present':
         console.log('present')
     break;
-    case state :
+    case state != '':
         console.log("late");
     break;
-    case state:
+    case state != '':
         console.log("late -> Final warning");
     break;
     default:
         console.log("absent");
     break;
 }
+
+/*
+M A T H  M E T H O D
+- we make use of math method because it is efficient when you need to make use of numerical operators/functions
+*/
+
+let numbers = [9, 4, 2, 5, 10]
+function highestNumber(args) {
+    let highest = 0
+    for(let i in args) {
+        if(args[i] > args[i+1]) {
+            highest = args[i]
+        }
+    }
+    return highest
+}
+highestNumber(numbers)
+// if you display 'of' it will show values but if you display in, it will how the index.
