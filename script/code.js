@@ -34,14 +34,18 @@ console.log(personInfo);
 
 /* 
 I F  S T A T E M E N T S
+- if statements check whether or not a statement is true or false and what the outcome is; depending on the variables.
 */
 
-// let firstName = 'zubair'
-//     if(firstName) {
-//         console.log("present");
-//     }else {
-//         console.log("absent");
-//     }
+
+/*
+let firstName = 'zubair'
+    if(firstName) {
+        console.log("present");
+    }else {
+        console.log("absent");
+    }
+*/
 
 let firstName = 'zubair'
     let state = 'late'
@@ -51,4 +55,19 @@ let firstName = 'zubair'
         console.log('late');
     }else {
     console.log('absent');
+}
+
+switch (true) {
+    case state == 'present':
+        console.log('present')
+    break;
+    case state :
+        console.log("late");
+    break;
+    case state:
+        console.log("late -> Final warning");
+    break;
+    default:
+        console.log("absent");
+    break;
 }
