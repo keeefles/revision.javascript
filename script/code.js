@@ -141,14 +141,14 @@ R E S T  P A R A M E T E R
 */
 
 // combining arrays.
-let numbers = [9, 4, 20, 2, 5, 10, 9]
-let data = [11, 19]
-// let combine = [...numbers, ...data]
-// console.log(combine);
+// let numbers = [9, 4, 20, 2, 5, 10, 9]
+// let data = [11, 19]
+// // let combine = [...numbers, ...data]
+// // console.log(combine);
 
-console.log(Math.max(9, 11, 15, 20, 7));
-// won't work without the spread operator (...)
-console.log(Math.max(...numbers));
+// console.log(Math.max(9, 11, 15, 20, 7));
+// // won't work without the spread operator (...)
+// console.log(Math.max(...numbers));
 
 
 function display(...args) {
@@ -200,3 +200,97 @@ console.log(sentence.replace("programming", "aakeefah"));
 
 console.log();
 
+/*
+O P E R A T O R S
+
+-arithmetic: +, /, **, *, -, ++, --
+-assignment: =, +=, etc.
+-comparison: >=, <=, !=, ==, ===
+-logical: &&, ||, !
+typeof: typeof and instanceof
+*/
+
+// makes use of a prompt and displays the answer in the console.
+// let numb1 = +prompt("enter number 1")
+// let numb2 = +prompt("enter number 2")
+// console.log(numb1 + numb2);
+
+// calculating modulus.
+// modulus displays the remainder of the calculation.
+// console.log(6 % 2 > 0 ? "odd number" : "even number");
+
+/*
+T E R N A R Y  O P E R A T O R
+*/
+
+let salary = 5000
+let bonus = 2000
+let performance = true
+// console.log((salary < 5000 ) ? bonus : performance);
+console.log(performance ? salary + bonus : salary );
+
+/*
+B U I L T - I N  F U N C T I O N
+-a predefined function by javascript.
+-checks if a number is finite.
+*/
+
+// console.log(isFinite(-25));
+// // checks if value is a string
+// console.log(isNaN(52));
+
+// let isReady = confirm("are you ready?")
+// if(isReady) {
+//     console.log("Quit Time");
+// }else {
+//     console.log("Self-Study");
+// }
+
+/*
+R E C U R S I V E  F U N C T I O N
+- a function that repeats itself / calls itself. like a loop.
+*/
+
+let cnt = 0
+function numberUten(limit) {
+    if(cnt <= limit){
+        console.log(cnt);
+        cnt++
+        numberUten(limit--)
+    }
+}
+numberUten(10)
+
+// create an array and display the values using a recursive function.
+let numbers = [2, 5, 3, 9, 10]
+for(let x of numbers){
+    console.log(x);
+}
+
+// displays the numbers with the index.
+numbers.forEach((number, i)=> {
+    console.log(number, i);
+})
+
+let person = {
+    firstName: 'aakeefah',
+    lastName: 'jones'
+}
+// long version
+for(let p of Object.keys(person))
+    console.log(p);
+// shorter version
+for(let p in person){
+    console.log(p);}
+
+// we clone objects so we could have a backup.
+let numb1 = [3, 8, 5]
+let numb2 = [...numb1]
+// numb1.length = 0
+// numb1 = []
+// numb1.splice(), numb1.length
+// while(numb1.length > 0){
+//     numb1.pop()
+// }
+console.log(numb1, numb2);
+// reduce combines all the elements in an array and creates a single value.
