@@ -433,8 +433,28 @@ Local storage
 /*
 P R O M I S E
 -specifies two different placeholders. one for the revolve and another for reject.
+- resolve only works when the argument works.
+-if the arguument doesn't work it is then reject.
 */
 
+// including a + sign in front of prompt makes sure that it uses a number instead of a string.
+let myPromise = new Promise(args)
+function args(resolve, reject){
+    let numb1 = +prompt("Enter only a number")
+    if(typeof numb1 == 'number')
+        resolve(`The entered number is ${numb1}`)
+        reject(`Unfortunately ${numb1} is not a number`)
+}
+myPromise.then(
+    completed => console.log(completed),
+    rejected=> console.log(rejected)
+);
+// alternative.
+// myPromise.then(completed)=> {
+//     console.log(completed);
+// }
+
+/*
 let myPromise = new Promise((resolve, reject)=> {
     let numb1 = 12
     let numb2 = 2
@@ -448,6 +468,7 @@ myPromise.then(
     (correct)=>{
         console.log(correct);
     },
+
     // (denied)=> {
     //     console.log(denied);
     // }
@@ -456,12 +477,12 @@ myPromise.then(
 ).catch(rejected =>{
     console.log(rejected);
 })
-
+*/
 /*
-F E T C H  A P Igit 
+F E T C H  A P I
 -
 */
-
+/*
 let cardContainer = document.querySelector('[data-cards]') 
 fetch('https://randomuser.me/api?results=50')
 .then(data=> data.json())
@@ -480,6 +501,7 @@ fetch('https://randomuser.me/api?results=50')
         `
     })
 })
+*/
 
 /*
 A S Y N C R O N O U S  F U N C T I O N
